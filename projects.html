@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" href="assets/developer.png" />
+    <!-- ^font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- ^bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- ^animation library -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <!-- ^main css file -->
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body data-page="projects">
+    <div class="show_dev_img d-none">
+        <div class="image">
+            <i class="fa-regular fa-rectangle-xmark fa-2xl close_btn"></i>
+        </div>
+    </div>
+    <nav class="lg-width d-flex align-items-baseline justify-content-between py-2 position-fixed top-0 end-0">
+        <div class="nav_item ps-3 d-flex align-items-center">
+            <div class="me-2 fs-5"><i class="nav_btn fa-solid fa-bars"></i></div>
+            <p class="nav_title mb-0 fs-5">Projects</p>
+        </div>
+        <div class="social_icons d-flex pe-4">
+            <a href="https://www.facebook.com/abdullah.r.7" target="_blank" title="facebook"><i
+                    class="fa-brands fa-facebook fs-4 ps-2"></i></a>
+            <a href="https://www.linkedin.com/in/abdalla-ramadan-4433691a9" target="_blank" title="linkedin"><i
+                    class="fa-brands fa-linkedin fs-4 ps-2"></i></a>
+            <a href="https://github.com/AbdallahDonkol" target="_blank" title="github"><i
+                    class="fa-brands fa-github fs-4 ps-2"></i></a>
+            <a href="mailto:abdullahramadan123@gmail.com" target="_blank" title="gmail"><i
+                    class="fa-solid fa-envelope fs-4 ps-2"></i></a>
+            <a href="https://www.instagram.com/abdallaa_ramadan/" target="_blank" title="instagram"><i
+                    class="fa-brands fa-square-instagram fs-4 ps-2"></i></a>
+        </div>
+    </nav>
+    <main class="mainPage">
+        <aside>
+            <div class="top my-2 d-flex">
+                <div class="dev_image">
+                    <img src="assets/portfolio_img.avif" alt="">
+                </div>
+                <div class="text ps-3">
+                    <h4 class="top_title">Frontend developer</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="mode">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="tableContent mt-5 mb-3">
+                <i class="fa-solid fa-list-ul"></i>
+                Table of Contents
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="QR_code">
+                <img src="assets/QR_code.avif" alt="">
+            </div>
+        </aside>
+        <section id="projects" class="right_content flip_page lg-width position-relative">
+            <div class="loading align-items-baseline">
+                <div class="loader"></div>
+            </div>
+            <p class="iframep position-relative"><iframe frameborder="0" src="iframe2.html" width="100%" scrolling="no"></iframe>
+                <a href="#ref" class=" position-absolute" style="top: 80%;left: 50%;"><i
+                    class="fa-solid fa-angles-down text-danger fa-beat fs-1"></i></a>
+            </p>
+            <div class="right_content_bg position-relative"><img src="assets/Projects.avif" alt="">
+                <a href="#ref" class=" position-absolute" style="top: 80%;left: 50%;"><i
+                    class="fa-solid fa-angles-down text-body fa-beat fs-1"></i></a>
+            </div>
+            <div class="project_holder right_content py-5">
+                <div id="ref" class="container">
+                    <div class="row gy-3">
+                        <div class="col-md-6 mx-auto">
+                            <div class="item" data-aos="fade-right">
+                                <div class="project_img">
+                                    <img src="assets/restaurant_app.avif" class="img-fluid" alt="">
+                                </div>
+                                <h3 class="title text-center mb-4">Restaurant Page</h3>
+                                <div class="links d-flex justify-content-around">
+                                    <div class="button--janus"><a
+                                            href="https://github.com/AbdallahDonkol/restaurant-webPage" target="_blank"
+                                            class="me-2 position-relative">Code</a><i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div class="button--janus"><a
+                                            href="https://abdallahdonkol.github.io/restaurant-webPage/" target="_blank"
+                                            class="me-2 position-relative">Demo</a><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <div class="item" data-aos="fade-right">
+                                <div class="project_img">
+                                    <img src="assets/game_reviews.avif" class="img-fluid" alt="">
+                                </div>
+                                <h3 class="title text-center mb-4">Game Reviews</h3>
+                                <div class="links d-flex justify-content-around">
+                                    <div class="button--janus"><a href="https://github.com/AbdallahDonkol/Game-reviews"
+                                            target="_blank" class="me-2 position-relative">Code</a><i
+                                            class="fa-brands fa-github"></i></div>
+                                    <div class="button--janus"><a href="https://abdallahdonkol.github.io/Game-reviews/"
+                                            target="_blank" class="me-2 position-relative">Demo</a><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <div class="item" data-aos="fade-right">
+                                <div class="project_img">
+                                    <img src="assets/weather_app.avif" class="img-fluid" alt="">
+                                </div>
+                                <h3 class="title text-center mb-4">Weather App</h3>
+                                <div class="links d-flex justify-content-around">
+                                    <div class="button--janus"><a href="https://github.com/AbdallahDonkol/weather-app"
+                                            target="_blank" class="me-2 position-relative">Code</a><i
+                                            class="fa-brands fa-github"></i></div>
+                                    <div class="button--janus"><a href="https://abdallahdonkol.github.io/weather-app/"
+                                            target="_blank" class="me-2 position-relative">Demo</a><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <div class="item" data-aos="fade-right">
+                                <div class="project_img">
+                                    <img src="assets/todo_list.avif" class="img-fluid" alt="">
+                                </div>
+                                <h3 class="title text-center mb-4">Todo List</h3>
+                                <div class="links d-flex justify-content-around">
+                                    <div class="button--janus"><a
+                                            href="https://github.com/AbdallahDonkol/Todo-list-with-API" target="_blank"
+                                            class="me-2 position-relative">Code</a><i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div class="button--janus"><a
+                                            href="https://abdallahdonkol.github.io/Todo-list-with-API/" target="_blank"
+                                            class="me-2 position-relative">Demo</a><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <div class="item" data-aos="fade-right">
+                                <div class="project_img">
+                                    <img src="assets/bookmarker-app.avif" class="img-fluid" alt="">
+                                </div>
+                                <h3 class="title text-center mb-4">Bookmarker App</h3>
+                                <div class="links d-flex justify-content-around">
+                                    <div class="button--janus"><a href="https://github.com/AbdallahDonkol/bookmarker"
+                                            target="_blank" class="me-2 position-relative">Code</a><i
+                                            class="fa-brands fa-github"></i></div>
+                                    <div class="button--janus"><a href="https://abdallahdonkol.github.io/bookmarker/"
+                                            target="_blank" class="me-2 position-relative">Demo</a><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <div class="item" data-aos="fade-right">
+                                <div class="project_img">
+                                    <img src="assets/daniels_template.avif" class="img-fluid" alt="">
+                                </div>
+                                <h3 class="title text-center mb-4">Daniels Template</h3>
+                                <div class="links d-flex justify-content-around">
+                                    <div class="button--janus"><a
+                                            href="https://github.com/AbdallahDonkol/daniels-template" target="_blank"
+                                            class="me-2 position-relative">Code</a><i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div class="button--janus"><a
+                                            href="https://abdallahdonkol.github.io/daniels-template/" target="_blank"
+                                            class="me-2 position-relative">Demo</a><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <div class="item" data-aos="fade-right">
+                                <div class="project_img">
+                                    <img src="assets/mealify_template.avif" class="img-fluid" alt="">
+                                </div>
+                                <h3 class="title text-center mb-4">Mealify Template</h3>
+                                <div class="links d-flex justify-content-around">
+                                    <div class="button--janus"><a
+                                            href="https://github.com/AbdallahDonkol/mealify-template" target="_blank"
+                                            class="me-2 position-relative">Code</a><i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div class="button--janus"><a
+                                            href="https://abdallahdonkol.github.io/mealify-template/" target="_blank"
+                                            class="me-2 position-relative">Demo</a><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/AbdallahDonkol?tab=repositories" target="_blank"><button
+                            class="mt-5 mb-4 d-block mx-auto px-5">See More</button></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ^bootstrap js file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ^ animation library -->
+    <script src="js/aos.js"></script>
+    <!-- ^jquery library -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- ^main js file -->
+    <script src="js/logic.js" defer></script>
+</body>
+
+</html>

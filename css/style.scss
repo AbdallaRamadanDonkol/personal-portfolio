@@ -1,0 +1,576 @@
+@import "fonts.scss";
+//& global variables
+$red-color: #e20000;
+$bg-color: #ececec;
+$white-color: #fff;
+$black-color: #000;
+$secondary-color: #595c5f;
+$grey-color: #a9a9a9;
+$main-transition: all 0.5s;
+$track-color: #f1f1f1;
+$thumb-color: #000000;
+$scrollbar-size: 8px;
+$scrollbar-radius: 10px;
+:root {
+  --bg-color: #ececec;
+  --black-color: #000;
+  --secondary-color: #595c5f;
+}
+:root:has(#mode:checked){
+  --bg-color: #011627;
+  --black-color: #fff;
+  --secondary-color: #fff;
+}
+//& global rules
+::-moz-selection {
+  background-color: #b85b1e;
+}
+::selection {
+  background-color: #b85b1e;
+}
+body {
+  &::-webkit-scrollbar {
+    width: $scrollbar-size;
+  }
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+    border-radius: $scrollbar-radius;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: $scrollbar-radius;
+  }
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-color: $thumb-color $track-color;
+  }
+}
+.container {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline: 15px;
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+}
+
+h1 {
+  font-size: 55px;
+  @media screen and (max-width: 1200px) {
+    font-size: 40px !important;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 30px !important;
+  }
+}
+h3 {
+  font-size: 35px;
+  @media screen and (max-width: 1200px) {
+    font-size: 30px !important;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 22px !important;
+  }
+}
+p {
+  font-size: 18px;
+  @media screen and (max-width: 1200px) {
+    font-size: 16px !important;
+  }
+  @media screen and (max-width: 426px) {
+    font-size: 14px !important;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: unset;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 14px !important;
+  }
+}
+i {
+  cursor: pointer;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+}
+.lg-width {
+  @media screen and (min-width: 1300px) {
+    width: calc(100% - 330px);
+    left: 330px !important;
+  }
+}
+.pageWidth {
+  width: calc(100% - 330px);
+  @media screen and (max-width: 320px) {
+    width: calc(100% - 280px);
+  }
+}
+.grey-color {
+  color: #a9a9a9 !important;
+}
+.active {
+  color: $red-color !important;
+  font-weight: bold !important;
+}
+.show_dev_img {
+  background-color: rgb(0 0 0 / 50%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  .image {
+    margin-top: 50px;
+    position: absolute;
+    background-image: url("../assets/portfolio_img.avif");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 50%;
+    width: 700px;
+    height: 500px;
+    transform: translateX(-50%);
+    margin-inline: auto;
+    @media screen and (max-width: 767px) {
+      width: 90%;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  .close_btn {
+    position: absolute;
+    top: 20px;
+    right: 7px;
+    color: #fff;
+  }
+}
+.loading{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    .loader {
+      display: block;
+      position: relative;
+      top: 400px;
+      height: 20px;
+      width: 140px;
+      background-image: linear-gradient(#fff 20px, transparent 0),
+        linear-gradient(#fff 20px, transparent 0),
+        linear-gradient(#fff 20px, transparent 0),
+        linear-gradient(#fff 20px, transparent 0);
+      background-repeat: no-repeat;
+      background-size: 20px auto;
+      background-position: 0 0, 40px 0, 80px 0, 120px 0;
+      animation: pgfill 1s linear infinite;
+    }
+}
+
+@keyframes pgfill {
+  0% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  25% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  50% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  75% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  100% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0);
+  }
+}
+
+//&nav section
+nav {
+  z-index: 4;
+  background-color: $white-color;
+  left: 0;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.4);
+  .nav_item {
+    cursor: pointer;
+    width: fit-content;
+  }
+  .nav_item, .nav_item i{
+    @media screen and (min-width: 1300px) {
+      cursor: auto;
+    }
+  }
+  .fa-facebook {
+    color: #0000ff;
+  }
+  .fa-linkedin {
+    color: #0077b0;
+  }
+  .fa-envelope {
+    color: #f7b80c;
+  }
+  .fa-square-instagram {
+    color: #c42828;
+  }
+}
+//& aside section
+aside {
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 330px;
+  padding-block: 25px;
+  padding-inline-end: 20px;
+  box-shadow: inset -15px 0px 12px -10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: $scrollbar-size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: $scrollbar-radius;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $thumb-color;
+  }
+  @media screen and (max-width: 320px) {
+    width: 280px;
+  }
+  // @media screen and (max-width:1300px) {
+  //     left: -330px;
+  // }
+  .top {
+    padding-inline-start: 20px;
+    .dev_image img {
+      cursor: pointer;
+      width: 100px;
+      border-radius: 5px;
+    }
+    .top_title {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .tableContent {
+    padding-inline-start: 20px;
+    i {
+      cursor: auto;
+    }
+  }
+  .links {
+    li {
+      border-bottom: solid 1px rgba(120, 120, 120, 0.3);
+      padding: 10px 0 0 20px;
+      min-height: 40px;
+      margin: 0;
+      width: 330px;
+      a {
+        color: $grey-color;
+        transition: $main-transition;
+        display: inline-block;
+        width: 100%;
+        &:hover {
+          color: $red-color;
+        }
+      }
+    }
+  }
+  .QR_code {
+    width: 300px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    @media screen and (max-width: 320px) {
+      width: 260px;
+    }
+  }
+}
+//& light and dark mode
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+      &::before{
+        position: absolute;
+        content: "";
+        height: var(--size-of-icon,1.4em);
+        width: var(--size-of-icon,1.4em);
+        border-radius: 20px;
+        left: var(--slider-offset,0.3em);
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+        transition: .4s;
+    }
+  }
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+}
+// .flip_page{
+//     transform-origin: left center;
+//     transform-style: preserve-3d;
+// }
+// .fold-out {
+//     animation: foldOut 1s forwards;
+// }
+
+// .fold-in {
+//     animation: foldIn 1s forwards;
+// }
+// @keyframes foldOut {
+//     0% {
+//         transform: perspective(1000px) rotateY(0);
+//     }
+//     100% {
+//         transform: perspective(1000px) rotateY(-180deg);
+//     }
+// }
+
+// @keyframes foldIn {
+//     0% {
+//         transform: perspective(1000px) rotateY(-180deg);
+//     }
+//     100% {
+//         transform: perspective(1000px) rotateY(0);
+//     }
+// }
+.mainPage {
+  overflow-x: hidden;
+}
+//& right_content section
+.right_content {
+  background: radial-gradient(
+      circle at top left,
+      transparent 25%,
+      rgba(226, 0, 0, 0.3) 25.5%,
+      rgba(226, 0, 0, 0.3) 36%,
+      transparent 37%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      transparent 34%,
+      rgba(226, 0, 0, 0.3) 34.5%,
+      rgba(226, 0, 0, 0.3) 45.5%,
+      transparent 46%,
+      transparent 100%
+    );
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  background-size: cover;
+  z-index: 3;
+  @media screen and (max-width: 1299px) {
+    width: 100%;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 40px;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding-bottom: 0;
+      padding-top: 25px;
+      height: calc(100% - 15px);
+    }
+  }
+  .text {
+    @media screen and (min-width: 769px) {
+      max-width: 50%;
+    }
+    h1 {
+      color: var(--black-color);
+      text-shadow: 1px 1px 3px var(--black-color);
+    }
+    h3 {
+      color: $red-color;
+    }
+    p{
+      color: var(--black-color);
+    }
+  }
+  button {
+    --bg: #000;
+    --hover-bg: rgba(226, 0, 0, 0.5);
+    --hover-text: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 1em;
+    background: var(--bg);
+    transition: 0.2s;
+    &:hover {
+      color: var(--hover-text);
+      transform: translate(-0.25rem, -0.25rem);
+      background: var(--hover-bg);
+      box-shadow: 0.25rem 0.25rem var(--bg);
+    }
+    &:active {
+      transform: translate(0);
+      box-shadow: none;
+    }
+    @media screen and (max-width: 426px) {
+      color: var(--black-color);
+      background-color: rgba(226, 0, 0, 0.5);
+      box-shadow: 0.25rem 0.25rem var(--bg);
+    }
+    @media screen and (max-width: 320px) {
+      padding-inline: 5px;
+    }
+  }
+  .image {
+    width: 100%;
+    @media screen and (min-width: 1300px) {
+      width: 45%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 300px;
+      margin: auto;
+    }
+  }
+  .dev_image {
+    img {
+      width: 100px;
+    }
+  }
+  .loop-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+    padding: 1.5rem 0;
+    overflow: hidden;
+    // cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    @media screen and (max-width: 768px) {
+      padding: 15px 0;
+      position: unset;
+    }
+    .inner {
+      display: flex;
+      width: fit-content;
+      animation-name: loop;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: var(--direction);
+      animation-duration: var(--duration);
+      &:hover {
+        animation-play-state: paused; // Pause animation on hover
+      }
+    }
+    .skill {
+      display: flex;
+      align-items: center;
+      margin-right: 5rem;
+      img {
+        width: 70px;
+        @media screen and (max-width: 768px) {
+          width: 40px;
+        }
+      }
+    }
+  }
+  @keyframes loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+@import "about.scss";
+@import "skills.scss";
+@import "projects.scss";
+@import "contact.scss";

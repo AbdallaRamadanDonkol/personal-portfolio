@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" href="assets/developer.png" />
+    <!-- ^font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- ^bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- ^main css file -->
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body data-page="contact">
+    <div class="show_dev_img d-none">
+        <div class="image">
+            <i class="fa-regular fa-rectangle-xmark fa-2xl close_btn"></i>
+        </div>
+    </div>
+    <nav class="lg-width d-flex align-items-baseline justify-content-between py-2 position-fixed top-0 end-0">
+        <div class="nav_item ps-3 d-flex align-items-center">
+            <div class="me-2 fs-5"><i class="nav_btn fa-solid fa-bars"></i></div>
+            <p class="nav_title mb-0 fs-5">Contact</p>
+        </div>
+        <div class="social_icons d-flex pe-4">
+            <a href="https://www.facebook.com/abdullah.r.7" target="_blank" title="facebook"><i
+                    class="fa-brands fa-facebook fs-4 ps-2"></i></a>
+            <a href="https://www.linkedin.com/in/abdalla-ramadan-4433691a9" target="_blank" title="linkedin"><i
+                    class="fa-brands fa-linkedin fs-4 ps-2"></i></a>
+            <a href="https://github.com/AbdallahDonkol" target="_blank" title="github"><i
+                    class="fa-brands fa-github fs-4 ps-2"></i></a>
+            <a href="mailto:abdullahramadan123@gmail.com" target="_blank" title="gmail"><i
+                    class="fa-solid fa-envelope fs-4 ps-2"></i></a>
+            <a href="https://www.instagram.com/abdallaa_ramadan/" target="_blank" title="instagram"><i
+                    class="fa-brands fa-square-instagram fs-4 ps-2"></i></a>
+        </div>
+    </nav>
+    <main class="mainPage">
+        <aside>
+            <div class="top my-2 d-flex">
+                <div class="dev_image">
+                    <img src="assets/portfolio_img.avif" alt="">
+                </div>
+                <div class="text ps-3">
+                    <h4 class="top_title">Frontend developer</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="mode">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="tableContent mt-5 mb-3">
+                <i class="fa-solid fa-list-ul"></i>
+                Table of Contents
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="QR_code">
+                <img src="assets/QR_code.avif" alt="">
+            </div>
+        </aside>
+        <section id="contact" class="right_content flip_page lg-width position-relative vh-100">
+            <div class="loading">
+                <div class="loader" style="top: 0;"></div>
+            </div>
+            <div class="container p-5 mt-4">
+                <div class="row p-3 rounded-3">
+                    <div class="col-md-6">
+                        <div class="contactAnimation fs-3 fw-bold d-flex align-items-center">
+                            <span style="--i:1;">C</span>
+                            <span style="--i:2;">o</span>
+                            <span style="--i:3;">n</span>
+                            <span style="--i:4;">t</span>
+                            <span style="--i:5;">a</span>
+                            <span style="--i:6;">c</span>
+                            <span style="--i:7;">t</span>
+                            <span style="--i:8;" class="mx-1"></span>
+                            <span style="--i:9;">M</span>
+                            <span style="--i:10;">e</span>
+                        </div>
+                        <form onsubmit="sendEmail(); reset(); return false;">
+                            <label for="name" class="mb-1">Name*</label>
+                            <div class="input-icon position-relative">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="name" class="form-control mb-2 user_icon" id="name"
+                                    placeholder="Enter your name">
+                                </div>
+                                <p id="nameAlert" class="text-danger mb-0 d-none"><small>Enter a valid name, min 3 alphabet</small></p>
+                            <label for="email" class="mb-1">Email*</label>
+                            <div class="input-icon position-relative">
+                                <i class="fa-solid fa-envelope" style="padding-inline-start: 7px;"></i>
+                                <input type="email" name="email" class="form-control mb-2 emai_icon" id="email"
+                                    placeholder="Enter your email">
+                                </div>
+                                <p id="mailAlert" class="text-danger mb-0 d-none"><small>Enter a valid email</small></p>
+                            <label for="email" class="mb-1">Subject*</label>
+                            <div class="input-icon position-relative">
+                                <i class="fa-solid fa-book" style="padding-inline-start: 7px;"></i>
+                                <input type="text" name="subject" class="form-control mb-2 emai_icon"
+                                    id="subject" placeholder="Enter the subject">
+                                </div>
+                                <p id="subjectAlert" class="text-danger mb-0 d-none"><small>Enter a valid subject, min 3 alphabet</small></p>
+                            <label for="message" class="mb-1">Message*</label>
+                            <div class="input-icon position-relative">
+                                <i class="fa-solid fa-comment" style="top: 20px;padding-inline-start: 7px;"></i>
+                                <textarea id="message" name="msg" class="form-control mb-2 message_icon"
+                                    placeholder="Enter your message" rows="3"></textarea>
+                                </div>
+                                <p id="messageAlert" class="text-danger mb-0 d-none"><small>Required, min 3 characters</small></p>
+                            <button id="submitBtn" disabled type="submit" class="my-3 d-block mx-auto">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6 infoCol">
+                        <div class="info d-flex flex-column pt-3 px-3 pb-4 h-100 rounded-3">
+                            <div class="imageGif mx-auto">
+                                <img src="assets/contact.avif" class="img-fluid h-100" alt="">
+                            </div>
+                            <div class="details px-3">
+                                <div class="mb-3 d-flex align-items-center"><i
+                                        class="fa-solid fa-envelope me-2"></i><span>abdullahramadan123@gmail.com</span>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center"><i
+                                        class="fa-solid fa-phone me-2"></i><span>+201022604527</span></div>
+                                <div class="mb-3 d-flex align-items-center"><i
+                                        class="fa-solid fa-location-dot me-2"></i><span>Dahar - Hurghada - Egypt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="submit_success position-absolute top-50 start-50 translate-middle w-100 h-100 justify-content-center align-items-center">
+                <div class="item text-center">
+                    <div class="upper">
+                        <div><i class="fa-regular fa-circle-check fs-2"></i></div>
+                        <p>success</p>
+                    </div>
+                    <div class="lower">
+                        <p>message sent successfully</p>
+                        <button class="btn btn-success" id="continue">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ^bootstrap js file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ^ animation library -->
+    <script src="js/aos.js"></script>
+    <!-- ^jquery library -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- ^sending email library-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- ^main js file -->
+    <script src="js/logic.js" defer></script>
+</body>
+
+</html>

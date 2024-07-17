@@ -1,0 +1,213 @@
+#about {
+    .iframep {
+      margin: 0;
+      height: 100vh;
+      iframe {
+        height: 100%;
+      }
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+    .right_content_bg {
+      img {
+        max-width: 100%;
+      }
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+    .vijua {
+      color: $red-color;
+    }
+    .styles_section {
+      padding: 15px 0;
+      background-color: #000;
+      display: flex;
+      @media screen and (max-width: 425px) {
+        height: 300px;
+      }
+      .about_img1 {
+        background-color: #000;
+        min-width: 100%;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        & * {
+          text-align: left;
+        }
+      }
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+      }
+      figcaption {
+        position: absolute;
+        top: -1px;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        // opacity: 1;
+        padding: 30px 10px 30px 30px;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-right: 0.01px solid;
+        // transition: transform 0.5s ease-in-out;
+        width: 40%;
+        @media screen and (min-width: 992px) {
+          transform: translateX(-460%);
+        }
+  
+        // @media screen and (max-width: 376px) {
+        //     width: 82%;
+        //     padding-top: 5px;
+  
+        // }
+        @media screen and (max-width: 320px) {
+          padding-left: 15px !important;
+        }
+        &::before {
+          content: "";
+          left: 100%;
+          position: absolute;
+          top: 0;
+          width: 0;
+          height: 0;
+          border: 0 solid transparent;
+          border-right-width: 418px;
+          border-left-width: 0px;
+          border-bottom: 616px solid rgba(0, 0, 0, 0.9);
+        }
+        h3 {
+          font-weight: 900;
+          margin-top: 35%;
+          margin-bottom: 31px;
+          color: #fff;
+          font-size: 22.4px;
+          position: relative;
+          @media screen and (max-width: 500px) {
+            font-size: 1em !important;
+          }
+        }
+        p {
+          font-size: 15.2px;
+          position: relative;
+          @media screen and (max-width: 500px) {
+            font-size: 0.8em !important;
+          }
+        }
+        span,
+        p {
+          color: #fff;
+        }
+      }
+      &:hover figcaption {
+        transform: translateX(0);
+      }
+      .doodle {
+        p {
+          @media screen and (max-width: 768px) {
+            width: 300px;
+          }
+          @media screen and (max-width: 375px) {
+            width: 250px;
+          }
+        }
+        &::before {
+          @media screen and (max-width: 768px) {
+            border-right-width: 1200px;
+          }
+        }
+      }
+    }
+    .grid_conatiner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+      img {
+        height: 100%;
+      }
+      h3 {
+        width: 200px;
+      }
+      p {
+        width: 240px;
+      }
+      .grid_leftSide {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height: 800px;
+        padding-top: 0;
+        figcaption::before {
+          border-bottom: 950px solid rgba(0, 0, 0, 0.9);
+        }
+        h3 {
+          margin-top: 200px;
+          @media screen and (max-width: 768px) {
+            margin-top: 90px;
+          }
+        }
+        p {
+          @media screen and (max-width: 768px) {
+            width: 230px;
+          }
+        }
+      }
+      .grid_rightSide {
+        .styles_section {
+          height: 400px;
+          padding-top: 0;
+          padding-left: 15px;
+          @media screen and (max-width: 768px) {
+            padding-left: 0;
+          }
+          h3 {
+            @media screen and (max-width: 768px) {
+              margin-top: 65px;
+            }
+          }
+        }
+      }
+      .grid_leftSide,
+      .grid_rightSide {
+        @media screen and (max-width: 768px) {
+          height: auto;
+        }
+      }
+    }
+  }
+  .scene {
+    position: relative;
+    height: 100%;
+    background: url("../assets/drawing-bw1.avif") no-repeat fixed;
+    padding: 22rem;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .magic {
+    z-index: 5;
+    position: absolute;
+    top: calc(50% - 10rem);
+    left: calc(50% - 10rem);
+    width: 200px;
+    height: 200px;
+    background: url("../assets/drawing.avif") no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  
