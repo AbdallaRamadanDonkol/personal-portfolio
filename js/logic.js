@@ -201,6 +201,19 @@ const page = document.body.getAttribute("data-page");
         }
     }
 //& open and close side menu
+function closeSidebar(){
+    document.addEventListener("click", function(e) {
+        const aside = document.querySelector('aside');
+        let nav = document.querySelector('nav');
+        let { left: navbarOffset } = nav.getBoundingClientRect(); //getBoundingClientRect() is a method that returns a DOMRect object providing information about the size of an element and its position relative to the viewport.
+        if(navbarOffset != 0){
+            if (!aside.contains(e.target) && !nav.contains(e.target)) {
+                closeNavbar();
+            }
+        }
+    });
+}
+closeSidebar();
 $(".nav_item").click(function () {
     let { left: navbarOffset } = $("nav").offset();
     if(window.innerWidth > 320){
@@ -225,12 +238,16 @@ function moveNavbar() {
     $(".right_content").animate({ left: 330 },200,function(){
         $(".right_content").addClass("pageWidth");
     });
+    $(".nav_btn").removeClass("fa-bars");
+    $(".nav_btn").addClass("fa-close");
 }
 function closeNavbar(){
     $("nav").animate({ left: 0 },200);
     $("nav").removeClass("pageWidth");
     $(".right_content").animate({ left: 0 },200);
     $(".right_content").removeClass("pageWidth");
+    $(".nav_btn").removeClass("fa-close");
+    $(".nav_btn").addClass("fa-bars");
 }
 function moveNavbarSmallScreen() {
     $("nav").animate({ left: 280 },200,function(){
@@ -239,8 +256,9 @@ function moveNavbarSmallScreen() {
     $(".right_content").animate({ left: 280 },200,function(){
         $(".right_content").addClass("pageWidth");
     });
+    $(".nav_btn").removeClass("fa-bars");
+    $(".nav_btn").addClass("fa-close");
 }
-
 //& show and hide developer image when click on image
 $("aside .dev_image").click(function(){
     $(".show_dev_img").show(200).removeClass("d-none").addClass("d-flex");
