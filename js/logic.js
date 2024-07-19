@@ -204,10 +204,11 @@ const page = document.body.getAttribute("data-page");
 function closeSidebar(){
     document.addEventListener("click", function(e) {
         const aside = document.querySelector('aside');
-        let nav = document.querySelector('nav');
+        const nav = document.querySelector('nav');
+        const devImg = document.querySelector('.show_dev_img')
         let { left: navbarOffset } = nav.getBoundingClientRect(); //getBoundingClientRect() is a method that returns a DOMRect object providing information about the size of an element and its position relative to the viewport.
         if(navbarOffset != 0){
-            if (!aside.contains(e.target) && !nav.contains(e.target)) {
+            if (!aside.contains(e.target) && !nav.contains(e.target) && !devImg.contains(e.target)) {
                 closeNavbar();
             }
         }
