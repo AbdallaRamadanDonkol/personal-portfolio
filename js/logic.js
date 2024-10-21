@@ -200,6 +200,35 @@ const page = document.body.getAttribute("data-page");
         });
         }
     }
+if(page == 'futureCoders'){
+        const multipleItems = document.querySelector('.multiple-items');
+        console.log(multipleItems);
+        
+        let cartona =''
+        for(let i=1; i<=34; i++){
+            cartona +=`<div class='imgBox px-3'><img class="w-100 h-100 rounded-3" src="./assets/class${i}.png" alt=""></div>`
+        }
+        multipleItems.innerHTML = cartona;
+        $('.multiple-items').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            // autoplay: true,
+            autoplaySpeed:3000,
+            prevArrow: '<i class="fa-solid fa-circle-arrow-left"></i>',
+            nextArrow: '<i class="fa-solid fa-circle-arrow-right"></i>',
+            responsive: [
+                {
+                    breakpoint: 768, // Define mobile screen size
+                    settings: {
+                        slidesToShow: 1, // Display 1 image on mobile
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+          });
+              
+    }
 //& open and close side menu
 function closeSidebar(){
     document.addEventListener("click", function(e) {
