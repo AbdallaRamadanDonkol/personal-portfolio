@@ -1187,4 +1187,44 @@ aside .QR_code img {
 #contact .submit_success button {
   background-color: #8bc349;
   border: none;
+}
+
+#futureCoders .box {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+#futureCoders .box .multiple-items {
+  padding-bottom: 50px;
+}
+#futureCoders .box .multiple-items .imgBox {
+  height: 300px;
+}
+#futureCoders .box .multiple-items img {
+  border: 5px solid #000;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+#futureCoders .box .multiple-items img:hover {
+  transform: scale(0.9);
+}
+#futureCoders .box i {
+  position: absolute;
+  bottom: 0;
+  font-size: 25px;
+  z-index: 10;
+}
+#futureCoders .box .fa-circle-arrow-left {
+  left: 45%;
+}
+#futureCoders .box .fa-circle-arrow-right {
+  left: 55%;
 }/*# sourceMappingURL=style.css.map */
