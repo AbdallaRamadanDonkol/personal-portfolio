@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" href="assets/developer.png" />
+    <!-- ^font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- ^slick library -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- ^bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- ^main css file -->
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body data-page="futureCoders">
+    <div class="show_dev_img d-none">
+        <div class="image">
+            <i class="fa-regular fa-rectangle-xmark fa-2xl close_btn"></i>
+        </div>
+    </div>
+    <nav class="lg-width d-flex align-items-baseline justify-content-between py-2 position-fixed top-0 end-0">
+        <div class="nav_item ps-3 d-flex align-items-center">
+            <div class="me-2 fs-5"><i class="nav_btn fa-solid fa-bars"></i></div>
+            <p class="nav_title mb-0 fs-5">Future Coders</p>
+        </div>
+        <div class="social_icons d-flex pe-4">
+            <a href="https://www.facebook.com/abdullah.r.7" target="_blank" title="facebook"><i
+                    class="fa-brands fa-facebook fs-4 ps-2"></i></a>
+            <a href="https://www.linkedin.com/in/abdalla-ramadan-4433691a9" target="_blank" title="linkedin"><i
+                    class="fa-brands fa-linkedin fs-4 ps-2"></i></a>
+            <a href="https://github.com/AbdallahDonkol" target="_blank" title="github"><i
+                    class="fa-brands fa-github fs-4 ps-2"></i></a>
+            <a href="mailto:abdullahramadan123@gmail.com" target="_blank" title="gmail"><i
+                    class="fa-solid fa-envelope fs-4 ps-2"></i></a>
+            <a href="https://www.instagram.com/abdallaa_ramadan/" target="_blank" title="instagram"><i
+                    class="fa-brands fa-square-instagram fs-4 ps-2"></i></a>
+        </div>
+    </nav>
+    <main class="mainPage">
+        <aside>
+            <div class="top my-2 d-flex">
+                <div class="dev_image">
+                    <img src="assets/portfolio_img.avif" alt="" />
+                </div>
+                <div class="text ps-3">
+                    <h4 class="top_title">Frontend developer</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="mode" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="tableContent mt-5 mb-3">
+                <i class="fa-solid fa-list-ul"></i>
+                Table of Contents
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="futureCoders.html" class="active">Future Coders</a></li>
+            </ul>
+            <div class="QR_code">
+                <img src="assets/QR_code.avif" alt="" />
+            </div>
+        </aside>
+        <section id="futureCoders" class="right_content flip_page vh-100 lg-width position-relative">
+            <div class="loading align-items-baseline">
+                <div class="loader"></div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <div class="multiple-items"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ^bootstrap js file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ^ animation library -->
+    <script src="js/aos.js"></script>
+    <!-- ^jquery library -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- ^slick library -->
+    <script src="js/slick.js"></script>
+    <!-- ^main js file -->
+    <script src="js/logic.js" defer></script>
+</body>
+
+</html>
